@@ -22,4 +22,4 @@ docker run -d -p 8081:8081 -p 8082:8082 -p 8083:8083 --name nexus sonatype/nexus
 * Install jenkins on the other VM, and configure the initial installation
 * Install maven on the jenkins machine, and place the settings.xml file in /home/jenkins/.m2/settings.xml (fill in the password in settings.xml with your password for the nexus user you created)
 * Install the pipeline integration maven plugin
-* Create a pipeline project, and set up a script which will build and deploy your spring backend - see the provided jenkinsfile for an example
+* Create a pipeline project, and set up a script which will build your spring backend and deploy it to the artifact repo - see the provided jenkinsfile for an example
