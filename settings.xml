@@ -1,0 +1,10 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/200>
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd>
+  <servers>
+    <server>
+      <id>mycompany-repository</id>
+      <username>jenkins</username>
+      <password>********</password>
+    </server>
+  </servers>
+</settings>
