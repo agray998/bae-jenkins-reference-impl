@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage ('Build React') {
             steps {
-                // clone react, npm test, npm publish to nexus
+                git url: 'https://github.com/agray998/simple-node-js-react-npm-app'
+                
+                sh "npm install"
+                sh "npm test"
+                sh "npm publish --registry http://deploy-serve:8081/repository/mynpm"
             }
         }
         stage ('Build Maven') {
