@@ -40,4 +40,11 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            mail to: "you@example.com",
+                 subject: "Jenkins build ${env.BUILD_NUMBER}"
+                 body: "Build no. ${env.BUILD_NUMBER} finished with status: ${currentBuild.currentResult}."
+        }
+    }
 }
