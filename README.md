@@ -47,3 +47,6 @@ This will prompt you for a username and password (should match the credentials f
 ## Setting up Production Server
 * On the production machine (with ports 8080 and 3000), install npm and set up credentials for the nexus repository as before.
 * Ensure wget is installed; this will be used to retrieve the backend .war from nexus
+
+## Notes
+* At present, the spring and react apps used for this example do not actually connect to one another; connecting the two is assumed to be part of project 3. This project is concerned only with deploying them and, as such, separate reference apps are used for now to demonstrate the principles involved.
