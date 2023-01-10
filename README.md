@@ -1,6 +1,9 @@
 # bae-jenkins-reference-impl
 Reference implementation for project 4 - Jenkins
 
+## Overview
+This project covers the usage of Jenkins as a CI server, and specifically the use of Jenkins in conjunction with npm and maven to build, artifact and deploy react and spring layers of a web application. Knowledge of react, java, npm and maven will be assumed, the principles of jenkins will be covered in the teaching around this project.
+
 ## Requirements
 * 2 VMs - ideally ubuntu 20.04 - one with a firewall rule allowing access on port 8080 and the other with rules allowing access on ports 8081-8083
 * Existing Spring backend and React frontend
