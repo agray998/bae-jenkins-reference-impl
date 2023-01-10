@@ -5,7 +5,7 @@ Reference implementation for project 4 - Jenkins
 This project covers the usage of Jenkins as a CI server, and specifically the use of Jenkins in conjunction with npm and maven to build, artifact and deploy react and spring layers of a web application. Knowledge of react, java, npm and maven will be assumed, the principles of jenkins will be covered in the teaching around this project.
 
 ## Requirements
-* 2 VMs - ideally ubuntu 20.04 - one with a firewall rule allowing access on port 8080 and the other with rules allowing access on ports 8081-8083
+* 3 VMs - ideally ubuntu 20.04 - one with a firewall rule allowing access on port 8080, one with rules allowing access on ports 8081-8083, and the other with rules allowing access on ports 8080 and 3000
 * Existing Spring backend and React frontend
 
 ## Setting up Artifact Repo
@@ -36,4 +36,4 @@ npm adduser --registry http://<nexus-machine-hostname>:8081/repository/<name-of-
 ```
 This will prompt you for a username and password (should match the credentials for the nexus user you created) and an email (you can use a dummy email for this)
 * Install the pipeline integration maven plugin
-* Create a pipeline project, and set up a script which will build your react frontend and spring backend, and deploy them to the nexus server - see the provided jenkinsfile for an example
+* Create a pipeline project and set up a script which will build your react frontend and spring backend, push them to the nexus server, and then deploy to a production server - see the provided jenkinsfile for an example

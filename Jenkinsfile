@@ -28,6 +28,18 @@ pipeline {
         }
         stage ('deploy') {
             // ssh into server, pull from nexus, run spring app and react app
+            steps {
+                sh '''
+                ssh prod-serve << EOF
+                mkdir backend && cd $_
+                wget http://deploy-serve:8081/repository/maven-releases/com/qa/tdl/1.0.0/tdl-1.0.0.war
+                java -jar tdl-1.0.0.war
+                mkdir ../frontend && cd $_
+                npm install --registry http://deploy-serve:8081/repository/mynpm my-app
+                npm start my-app
+                EOF
+                '''
+            }
         }
     }
 }
