@@ -37,3 +37,7 @@ npm adduser --registry http://<nexus-machine-hostname>:8081/repository/<name-of-
 This will prompt you for a username and password (should match the credentials for the nexus user you created) and an email (you can use a dummy email for this)
 * Install the pipeline integration maven plugin
 * Create a pipeline project and set up a script which will build your react frontend and spring backend, push them to the nexus server, and then deploy to a production server - see the provided jenkinsfile for an example
+
+## Setting up Production Server
+* On the production machine (with ports 8080 and 3000), install npm and set up credentials for the nexus repository as before.
+* Ensure wget is installed
