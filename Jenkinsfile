@@ -19,9 +19,7 @@ pipeline {
                 withMaven {
 
                 // Run the maven build
-                sh "mvn clean verify"
-                sh "mvn clean install"
-                sh "mvn clean deploy"
+                sh "mvn clean deploy" // deploy also runs all phases prior to deploy
 
                 } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs & SpotBugs reports...
             }
